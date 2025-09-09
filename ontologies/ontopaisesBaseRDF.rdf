@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises"
+     xml:base="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontoPaises="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#capitalDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#capitalDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#tieneCapital"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#cercanoAlasCiudades -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#cercanoAlasCiudades">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#paisCercano"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#contieneA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#contieneA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#esParteDe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#esParteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#esParteDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Provincia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#limitaCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#limitaCon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#paisCercano -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#paisCercano">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#tieneCapital -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#tieneCapital"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#ubicadoEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#ubicadoEn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#poblacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#poblacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lugar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lugar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lugar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lugar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Provincia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lugar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisDelNorte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisDelNorte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisNoEuropeo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisNoEuropeo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Provincia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Provincia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lugar"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Alemania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Alemania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Austria"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Belgica"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Dinamarca"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Francia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Luxemburgo"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaicesBajos"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Polonia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#RepublicaCheca"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Suiza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Austria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Austria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Barcelona -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Barcelona">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Madrid"/>
+        <ontoPaises:ubicadoEn rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Espania"/>
+        <ontoPaises:poblacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1609000</ontoPaises:poblacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Belgica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Belgica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Berlin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Berlin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <ontoPaises:capitalDe rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Alemania"/>
+        <ontoPaises:ubicadoEn rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Alemania"/>
+        <ontoPaises:poblacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3470000</ontoPaises:poblacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Bielorusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Bielorusia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Georgia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Letonia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lituania"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Polonia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Rusia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ucrania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Dinamarca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Dinamarca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Espania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Espania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#limitaCon"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Francia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Portugal"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Francia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Portugal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Estonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Estonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Finlandia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Finlandia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisDelNorte"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Noruega"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Rusia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Suecia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Francia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Francia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Georgia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Georgia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisNoEuropeo"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Rusia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Hamburgo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Hamburgo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <ontoPaises:ubicadoEn rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Alemania"/>
+        <ontoPaises:poblacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1763000</ontoPaises:poblacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Islandia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Islandia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisDelNorte"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#limitaCon"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Letonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Letonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lituania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lituania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#limitaCon"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Bielorusia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Letonia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Polonia"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Bielorusia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Letonia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Polonia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Luxemburgo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Luxemburgo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Madrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Madrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <ontoPaises:capitalDe rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Espania"/>
+        <ontoPaises:ubicadoEn rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Espania"/>
+        <ontoPaises:poblacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3166000</ontoPaises:poblacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Noruega -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Noruega">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaicesBajos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaicesBajos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Polonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Polonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#RepublicaCheca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#RepublicaCheca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Rusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Rusia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisNoEuropeo"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Bielorusia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Estonia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Letonia"/>
+        <ontoPaises:limitaCon rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ucrania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Suecia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Suecia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Suiza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Suiza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ucrania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ucrania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#PaisEuropeo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Vilna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Vilna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+        <ontoPaises:ubicadoEn rdf:resource="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Lituania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://owl.man.ac.uk/2006/07/sssw/people#dog">
+        <rdfs:label xml:lang="es">perro</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://owl.man.ac.uk/2006/07/sssw/people#pet">
+        <rdfs:label xml:lang="es">mascota</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Ciudad"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Pais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises#Provincia"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

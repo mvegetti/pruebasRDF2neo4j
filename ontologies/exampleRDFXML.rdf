@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mdebe/ontologies/example#"
+     xml:base="http://www.semanticweb.org/mdebe/ontologies/example"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mdebe/ontologies/example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Aunt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Aunt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Brother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Brother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Sibling"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Child -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Child">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Parent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Daughter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Daughter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Child"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Father -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Father">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Parent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Man"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Friend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Friend">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Gender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Gender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Husband -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Husband">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Spouse"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Mother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Mother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Parent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Woman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Parent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Parent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Sibling -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Sibling">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Sister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Sister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Sibling"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Son -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Son">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Child"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Spouse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Spouse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Adult"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Adult"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Uncle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Uncle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Wife -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Wife">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Spouse"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Age">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relations">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Adult">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Boy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Boy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Child"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Child"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Girl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Child -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Child">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Gender">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Girl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Girl">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Child"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Child"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Hermit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Hermit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Man -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Man">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Parent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Parent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Child"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Social_Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Social_Person">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Social_Relation_With"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Woman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Woman">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Gender"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Beth_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Beth_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Daisy_Buchanan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Daisy_Buchanan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#John_Doe"/>
+        <has_Gender rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Female">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Jay_Gatsby -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Jay_Gatsby">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Beth_Doe"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Daisy_Buchanan"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#John_Doe"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#John_Smith"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Nick_Carraway"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#John_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#John_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Brother rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Tom_Doe"/>
+        <has_Daughter rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Mary_Doe"/>
+        <has_Friend rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#John_Smith"/>
+        <has_Sister rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Sarah_Doe"/>
+        <has_Wife rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Beth_Doe"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#John_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#John_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Mary_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Mary_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Sister rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Susan_Doe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Miss_Havisham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Miss_Havisham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Gender rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Nick_Carraway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Nick_Carraway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+        <has_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</has_Age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Sarah_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Sarah_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Susan_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Susan_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mdebe/ontologies/example#Tom_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Tom_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Beth_Doe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Daisy_Buchanan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Jay_Gatsby"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#John_Doe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#John_Smith"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Male"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Mary_Doe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Miss_Havisham"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Nick_Carraway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Sarah_Doe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Susan_Doe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#Tom_Doe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mdebe/ontologies/example#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Uncle_Rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Child"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Brother"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Uncle"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Aunt_Rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Child"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Sister"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#has_Aunt"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mdebe/ontologies/example#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
