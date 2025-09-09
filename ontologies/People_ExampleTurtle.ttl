@@ -282,7 +282,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 :Social_Person rdf:type owl:Class ;
                owl:equivalentClass [ owl:intersectionOf ( :Person
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :has_Social_Relation_With ;
+                                                            owl:onProperty :has_Friend ;
                                                             owl:minQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
                                                             owl:onClass :Person
                                                           ]
