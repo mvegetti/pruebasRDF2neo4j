@@ -1,0 +1,740 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises">
+    <Prefix name="" IRI="http://www.semanticweb.org/marcela/ontologies/2018/7/ontoPaises"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Ciudad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lugar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pais"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisCentralDeEuropa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisConPocosVecinos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisDelNorte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisEuropeo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisEuropeoDelNorte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisIsla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisNoEuropeo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisNordico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaisVecinoEuropa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Provincia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Region"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#capitalDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cercanoAlasCiudades"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contieneA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#esParteDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#limitaCon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#paisCercano"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneCapital"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ubicadoEn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#poblacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alemania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Austria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Belgica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Berlin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bielorusia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dinamarca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Espania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Finlandia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Francia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Georgia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hamburgo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Islandia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Letonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lituania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Luxemburgo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Madrid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Noruega"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PaicesBajos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Polonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Portugal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RepublicaCheca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rusia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Suecia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Suiza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ucrania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vilna"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Lugar"/>
+        <ObjectUnionOf>
+            <Class IRI="#Ciudad"/>
+            <Class IRI="#Pais"/>
+            <Class IRI="#Provincia"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisCentralDeEuropa"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PaisEuropeo"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#limitaCon"/>
+                <Class IRI="#PaisEuropeo"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#limitaCon"/>
+                <Class IRI="#PaisEuropeo"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisConPocosVecinos"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pais"/>
+            <ObjectMaxCardinality cardinality="3">
+                <ObjectProperty IRI="#limitaCon"/>
+                <Class IRI="#Pais"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisEuropeoDelNorte"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PaisDelNorte"/>
+            <Class IRI="#PaisEuropeo"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisIsla"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pais"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#limitaCon"/>
+                    <Class IRI="#Pais"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisNoEuropeo"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pais"/>
+            <ObjectComplementOf>
+                <Class IRI="#PaisEuropeo"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisNordico"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Dinamarca"/>
+            <NamedIndividual IRI="#Finlandia"/>
+            <NamedIndividual IRI="#Islandia"/>
+            <NamedIndividual IRI="#Noruega"/>
+            <NamedIndividual IRI="#Suecia"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PaisVecinoEuropa"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PaisNoEuropeo"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#limitaCon"/>
+                <Class IRI="#PaisEuropeo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Region"/>
+        <ObjectUnionOf>
+            <Class IRI="#Pais"/>
+            <Class IRI="#Provincia"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Ciudad"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pais"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisCentralDeEuropa"/>
+        <Class IRI="#PaisEuropeo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisConPocosVecinos"/>
+        <Class IRI="#Pais"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisDelNorte"/>
+        <Class IRI="#Pais"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisEuropeo"/>
+        <Class IRI="#Pais"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisEuropeoDelNorte"/>
+        <Class IRI="#Pais"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisIsla"/>
+        <Class IRI="#Pais"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisNoEuropeo"/>
+        <Class IRI="#Pais"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisNordico"/>
+        <Class IRI="#PaisEuropeo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaisVecinoEuropa"/>
+        <Class IRI="#PaisNoEuropeo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provincia"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Region"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Ciudad"/>
+        <Class IRI="#Pais"/>
+        <Class IRI="#Provincia"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Alemania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Austria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ciudad"/>
+        <NamedIndividual IRI="#Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Belgica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ciudad"/>
+        <NamedIndividual IRI="#Berlin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Dinamarca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Espania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#limitaCon"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Francia"/>
+                <NamedIndividual IRI="#Portugal"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Espania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Estonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisDelNorte"/>
+        <NamedIndividual IRI="#Finlandia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Finlandia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Francia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisNoEuropeo"/>
+        <NamedIndividual IRI="#Georgia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ciudad"/>
+        <NamedIndividual IRI="#Hamburgo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisDelNorte"/>
+        <NamedIndividual IRI="#Islandia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Islandia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#limitaCon"/>
+                <Class IRI="#Pais"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Islandia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Letonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Lituania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Luxemburgo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ciudad"/>
+        <NamedIndividual IRI="#Madrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Noruega"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Polonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Portugal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#RepublicaCheca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisNoEuropeo"/>
+        <NamedIndividual IRI="#Rusia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Suecia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Suiza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PaisEuropeo"/>
+        <NamedIndividual IRI="#Ucrania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ciudad"/>
+        <NamedIndividual IRI="#Vilna"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Madrid"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Austria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Belgica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Dinamarca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Francia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Luxemburgo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#PaicesBajos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Polonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#RepublicaCheca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Alemania"/>
+        <NamedIndividual IRI="#Suiza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Espania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#capitalDe"/>
+        <NamedIndividual IRI="#Berlin"/>
+        <NamedIndividual IRI="#Alemania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <NamedIndividual IRI="#Berlin"/>
+        <NamedIndividual IRI="#Alemania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+        <NamedIndividual IRI="#Georgia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+        <NamedIndividual IRI="#Letonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+        <NamedIndividual IRI="#Lituania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+        <NamedIndividual IRI="#Polonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+        <NamedIndividual IRI="#Rusia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+        <NamedIndividual IRI="#Ucrania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Espania"/>
+        <NamedIndividual IRI="#Francia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Espania"/>
+        <NamedIndividual IRI="#Portugal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Finlandia"/>
+        <NamedIndividual IRI="#Noruega"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Finlandia"/>
+        <NamedIndividual IRI="#Rusia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Finlandia"/>
+        <NamedIndividual IRI="#Suecia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Georgia"/>
+        <NamedIndividual IRI="#Rusia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <NamedIndividual IRI="#Hamburgo"/>
+        <NamedIndividual IRI="#Alemania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Lituania"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Lituania"/>
+        <NamedIndividual IRI="#Letonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Lituania"/>
+        <NamedIndividual IRI="#Polonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#capitalDe"/>
+        <NamedIndividual IRI="#Madrid"/>
+        <NamedIndividual IRI="#Espania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <NamedIndividual IRI="#Madrid"/>
+        <NamedIndividual IRI="#Espania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Rusia"/>
+        <NamedIndividual IRI="#Bielorusia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Rusia"/>
+        <NamedIndividual IRI="#Estonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Rusia"/>
+        <NamedIndividual IRI="#Letonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Rusia"/>
+        <NamedIndividual IRI="#Ucrania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <NamedIndividual IRI="#Vilna"/>
+        <NamedIndividual IRI="#Lituania"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Barcelona"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1609000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Berlin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3470000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Hamburgo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1763000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Madrid"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3166000</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#capitalDe"/>
+        <ObjectProperty IRI="#tieneCapital"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#cercanoAlasCiudades"/>
+        <ObjectProperty IRI="#paisCercano"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contieneA"/>
+        <ObjectProperty IRI="#esParteDe"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#capitalDe"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#esParteDe"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#ubicadoEn"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#limitaCon"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#capitalDe"/>
+        <Class IRI="#Ciudad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#esParteDe"/>
+        <Class IRI="#Provincia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#limitaCon"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#paisCercano"/>
+        <Class IRI="#Ciudad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <Class IRI="#Ciudad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#capitalDe"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#esParteDe"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#limitaCon"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#paisCercano"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ubicadoEn"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#ubicadoEn"/>
+            <ObjectProperty IRI="#limitaCon"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#paisCercano"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#poblacion"/>
+        <Class IRI="#Lugar"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#poblacion"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2006/07/sssw/people#dog</IRI>
+        <Literal xml:lang="es">perro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2006/07/sssw/people#pet</IRI>
+        <Literal xml:lang="es">mascota</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
